@@ -17,7 +17,7 @@ namespace RateMyAgent.Refactoring.Implementations
 
         public SqlServerRepository()
         {
-            _connectionString = ConfigurationManager.AppSettings["TradesDb"];
+            _connectionString = ConfigurationManager.ConnectionStrings["TradesDb"].ConnectionString;
         }
 
         public void Save(List<TradeRecord> tradeRecords)
